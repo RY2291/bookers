@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flash {
+    color: green;
+}
+
+.error_text {
+    color: white;
+    background-color: red;
+    width: 450;
+}
+
+.error {
+    margin: 50px auto;
+}
+
+body {
+    margin-left: 50px;
+    
+}
+
+.title-1 {
+    margin: 18px 0;
+}
+
+.title-2 {
+    margin: 17px 0;
+}
