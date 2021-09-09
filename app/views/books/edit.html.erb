@@ -1,6 +1,6 @@
 <% if flash[:notice] %>
     <div class="flash">
-         <%= flash[:notice] %>
+        <%= flash[:notice] %>
     </div>
 <% end %>
 
@@ -8,14 +8,14 @@
 
 <%= form_with model: @book, local:true do |f| %>
 <p>Title</p>
-<%= f.text_field :title %>
+<p><%= f.text_field :title %></p>
 
 <p>Body</p>
-<%= f.text_area :body %>
-<%= f.submit "Update book" %>
+<p><%= f.text_area :body %></p>
+<p><%= f.submit "Update book" %></p>
 
 <% end %>
 
 <%= link_to "Show", book_path(@book.id) %>
 |
-<%= link_to "Back", books_path(@book.id) %>
+<%= link_to "Back", books_path %>
