@@ -7,12 +7,14 @@
 <h1>Editing Book</h1>
 
 <% if @book.errors.any? %>
-         <p class="error_text"><%= @book.errors.count %>errors prohibited this book from being saved:</p>
-         <ul>
-             <% @book.errors.full_messages.each do |message| %>
-                 <li><%= message %></li>
-             <% end %>
-         </ul>
+    <p class="error_text">
+    <%= @book.errors.count %>errors prohibited this book from being saved:
+    </p>
+    <ul>
+    <% @book.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end %>
+    </ul>
 <% end %>
 
 <%= form_with model: @book, local:true do |f| %>
