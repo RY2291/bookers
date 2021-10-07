@@ -1,0 +1,21 @@
+<h1>Users Info</h1>
+<%= render "info", user: @user %>
+<h1>New Book</h1>
+<%= render "form", book: @book %>
+<h1>Books</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Opinion</th>
+    </tr>
+  </thead>
+  <% @books.each do |book| %>
+  <tbody>
+    <tr>
+      <th><%= book.title %></th>
+      <th><%= book.body %></th>
+    </tr>
+  </tbody>
+  <% end %>
+</table>

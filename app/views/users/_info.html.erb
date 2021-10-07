@@ -1,0 +1,15 @@
+<table>
+  <tbody>
+    <tr><%= attachment_image_tag user, :profile_image_id, :fill, 100, 100, fallback: "no_image.png" %></tr>
+    <tr>
+      <td>name</td>
+      <td><%= user.name %></td>
+    </tr>
+    <tr>
+      <td>introduction</td>
+      <td><%= user.introduction%></td>
+    </tr>
+  </tbody>
+</table>
+<%= link_to "user_edit", edit_user_path(user.id) %>
+
