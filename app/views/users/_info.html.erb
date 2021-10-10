@@ -9,6 +9,14 @@
       <td>introduction</td>
       <td><%= user.introduction%></td>
     </tr>
+    <tr>
+      <td>following</td>
+      <td><%=link_to user.followings.count, user_following_path(user.id) %></td>
+    </tr>
+    <tr>
+      <td>follower</td>
+      <td><%= link_to user.followers.count, user_follower_path(user.id) %></td>
+    </tr>
   </tbody>
 </table>
 <%= link_to "user_edit", edit_user_path(user.id) %>
