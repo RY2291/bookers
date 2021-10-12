@@ -1,0 +1,41 @@
+<% if @user.present? %>
+  <h2>Users search for "<%= params[:search] %>"</h2>
+  <table calss="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>Introduction</th>
+      </tr>
+    </thead>
+  <% @user.each do |user| %>
+    <tbody>
+      <tr>
+        <th><%= attachment_image_tag user, :profile_image, :fill, 100, 100, fallback: "no_image.png" %></th>
+        <th><%= user.name %></th>
+        <th><%= user.introduction %></th>
+      </tr>
+    </tbody>
+  <% end %>
+  </table>
+<% elsif @book.present? %>
+  <h2>Books search for "<%= params[:search] %>"</h2>
+  <table calss="table">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Title</th>
+        <th>Opinion</th>
+      </tr>
+    </thead>
+  <% @book.each do |book| %>
+    <tbody>
+      <tr>
+        <th><%= attachment_image_tag book, :profile_image, :fill, 100, 100, fallback: "no_image.png" %></th>
+        <th><%= book.title %></th>
+        <th><%= book.body %></th>
+      </tr>
+    </tbody>
+  <% end %>
+  </table>
+<% end %>
