@@ -1,0 +1,4 @@
+$('#favorite_buttons_<%= @book.id %>').html('<%= j (render partial: 'favorites/favorites', locals: { book: @book}) %>');
+
+alert("いいねを解除しました")
+
